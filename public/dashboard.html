@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coach Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="Assets/star.png" alt="Brawl Stars Logo" class="logo-img">
+                BS Coach
+            </div>
+            <div class="profile">
+                <img src="<%= user.avatar %>" alt="Profile Picture" class="profile-img">
+                <span>Welcome, <%= user.username %>!</span>
+            </div>
+            <div class="logout-btn">
+                <a href="/logout">Logout</a>
+            </div>
+        </header>
+
+        <main>
+            <div class="content-wrapper">
+                <h1>Your Dashboard</h1>
+                <p>Manage your settings and view your badges.</p>
+                <!-- Badge display example -->
+                <% if (badge) { %>
+                    <div class="badge">
+                        <p>Your Badge: <%= badge %></p>
+                    </div>
+                <% } else { %>
+                    <p>No badge assigned.</p>
+                <% } %>
+            </div>
+        </main>
+
+    </div>
+</body>
+</html>
